@@ -1,11 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://coc12xbx4l33"]
+[gd_scene load_steps=3 format=3 uid="uid://bplras50x0yii"]
 
-[ext_resource type="Script" uid="uid://327b5a8qf32e" path="res://example/example_player.gd" id="1_3dmge"]
+[ext_resource type="Script" uid="uid://crv5q8f76m0wl" path="res://example/examle basic player/basic_movement_template.gd" id="1_8in4g"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_uwhgk"]
 
-[node name="ExamplePlayer" type="RigidBody3D"]
-script = ExtResource("1_3dmge")
+[node name="ExampleBasicPlayer" type="RigidBody3D"]
+script = ExtResource("1_8in4g")
 metadata/_custom_type_script = "uid://djdfidip0o045"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

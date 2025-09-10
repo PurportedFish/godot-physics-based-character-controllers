@@ -89,7 +89,7 @@ func move_and_slide() -> void:
 	move_force = modify_move_force(move_force)
 	
 	if _is_on_floor:
-		if _floor_normal.is_normalized():
+		if _floor_normal.is_normalized() and move_force.normalized().dot(_floor_normal) > 0.1:
 			move_force = move_force.slide(_floor_normal)
 		if not floor_constant_speed and target_velocity.normalized().dot(_floor_normal) < -0.1:
 			move_force *= clampf(_floor_normal.dot(up_direction), -1.0, 1.0)

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cdqwb1omgj1kr" path="res://assets/kenney prototype textures/PNG/Orange/texture_06.png" id="2_dqhm7"]
 [ext_resource type="PhysicsMaterial" uid="uid://4o2bsgkt74mv" path="res://example/physics materials/box_physics_material.tres" id="3_t1e6r"]
 [ext_resource type="PhysicsMaterial" uid="uid://sa28tanjl68q" path="res://example/physics materials/sphere_physics_material.tres" id="5_jyrt8"]
-[ext_resource type="PackedScene" uid="uid://coc12xbx4l33" path="res://example/example_player.tscn" id="6_t1e6r"]
+[ext_resource type="PackedScene" uid="uid://bplras50x0yii" path="res://example/examle basic player/example_basic_player.tscn" id="6_t1e6r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ugae7"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -406,7 +406,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box1KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "1 kg"
 
@@ -427,7 +427,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box5KG"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "5 kg"
 
@@ -448,7 +448,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box10KG"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "10 kg"
 
@@ -469,7 +469,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box15KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "15 kg"
 
@@ -490,7 +490,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box25KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "25 kg"
 
@@ -511,7 +511,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box50KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "50 kg"
 
@@ -532,7 +532,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box75KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "75 kg"
 
@@ -553,7 +553,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Boxes/Box100KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "100 kg"
 
@@ -576,7 +576,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere1KG"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "1 kg"
 
@@ -597,7 +597,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere5KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "5 kg"
 
@@ -618,7 +618,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere10KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "10 kg"
 
@@ -639,7 +639,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere15KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "15 kg"
 
@@ -660,7 +660,7 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere25KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "25 kg"
 
@@ -681,8 +681,8 @@ remote_path = NodePath("../Label3D")
 update_rotation = false
 
 [node name="Label3D" type="Label3D" parent="Interactables/Spheres/Sphere50KG"]
-transform = Transform3D(1, 0, -2.9802287e-08, 0, 1, 0, 2.9802287e-08, 0, 1, 0, 0.75, 0)
+transform = Transform3D(1, 0, 2.682209e-07, 0, 1, 0, -2.682209e-07, 0, 1, 0, 0.75, 0)
 billboard = 1
 text = "50 kg"
 
-[node name="ExamplePlayer" parent="." instance=ExtResource("6_t1e6r")]
+[node name="ExampleBasicPlayer" parent="." instance=ExtResource("6_t1e6r")]

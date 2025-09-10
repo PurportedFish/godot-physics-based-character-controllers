@@ -1,7 +1,8 @@
 extends RigidCharacterBody3D
 
-const ACCELRATION_CURVE: Curve = preload("res://example/acceleration_curve.tres")
-const SPEED: float = 5.0
+
+const ACCELRATION_CURVE: Curve = preload("res://example/example smooth player/smooth_acceleration_curve.tres")
+const SPEED: float = 3.0
 const JUMP_HEIGHT: float = 1.1
 
 @onready var body: Node3D = $Body
@@ -13,7 +14,6 @@ var _wants_to_jump: bool
 func _ready() -> void:
 	super()
 	mass = 60.0
-	acceleration_magnitude = 50.0
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -24,11 +24,15 @@ func _physics_process(_delta: float) -> void:
 	linear_damp = 0.0
 	
 	if direction or _wants_to_jump:
+		if is_on_floor():
+			acceleration_magnitude = 15.0
+		else:
+			acceleration_magnitude = 9.8
 		target_velocity.x = SPEED * direction.x
 		target_velocity.z = SPEED * direction.z
 	else:
 		if is_on_floor():
-			linear_damp = 30.0
+			linear_damp = 20.0
 		target_velocity.x = 0.0
 		target_velocity.z = 0.0
 	
