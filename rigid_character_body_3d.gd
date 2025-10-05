@@ -205,7 +205,8 @@ func _detect_ceiling_floor_wall() -> void:
 		if get_parent() is AnimatableBody3D:
 			var platform_velocity: Vector3 = PhysicsServer3D.body_get_state(
 					get_parent().get_rid(), PhysicsServer3D.BODY_STATE_LINEAR_VELOCITY)
-			if not _is_on_floor and linear_velocity.dot(platform_velocity) < 0.0:
+			print(linear_velocity)
+			if not _is_on_floor and linear_velocity.dot(platform_velocity) <= 0.0:
 				if platform_on_leave == PlatformOnLeave.ADD_VELOCITY:
 					linear_velocity += platform_velocity
 				elif  (

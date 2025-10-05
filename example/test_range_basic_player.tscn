@@ -110,7 +110,7 @@ material = SubResource("StandardMaterial3D_kh1tm")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_m5107"]
 
-[node name="TestRange" type="Node3D"]
+[node name="TestRangeBasicPlayer" type="Node3D"]
 
 [node name="Environment" type="Node3D" parent="."]
 
@@ -383,6 +383,17 @@ script = SubResource("GDScript_5jgqp")
 mesh = SubResource("BoxMesh_nskdt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Structures/MovingPlatform"]
+shape = SubResource("ConvexPolygonShape3D_ahtt0")
+
+[node name="MovingPlatform2" type="AnimatableBody3D" parent="Structures"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.5, -11)
+physics_material_override = ExtResource("1_b7flg")
+script = SubResource("GDScript_5jgqp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Structures/MovingPlatform2"]
+mesh = SubResource("BoxMesh_nskdt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Structures/MovingPlatform2"]
 shape = SubResource("ConvexPolygonShape3D_ahtt0")
 
 [node name="Interactables" type="Node3D" parent="."]
