@@ -12,3 +12,6 @@ The project includes:
 ## Notes
  * The code does not particularly use anything specific from Godot 4.5, so it is possible to use the class for earlier versions.
  * The project uses Jolt
+## TODO
+ * Stair handling (Might not puruse)
+ * Floating variant (Based on Toyful Games' Very Very Valet Character Controller)
