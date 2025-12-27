@@ -9,10 +9,10 @@ height = 1.5
 radius = 0.3
 
 [node name="FloatingRigidPlayer" type="RigidBody3D" node_paths=PackedStringArray("shape_cast")]
-mass = 10.0
+mass = 60.0
 script = ExtResource("1_b30f4")
 shape_cast = NodePath("ShapeCast3D")
-ride_spring_damper = 100.0
+ride_spring_damper = 500.0
 metadata/_custom_type_script = "uid://1vnxh8ttc1cx"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -22,7 +22,7 @@ shape = SubResource("CapsuleShape3D_b30f4")
 [node name="Body" type="Node3D" parent="."]
 
 [node name="Camera3D" type="Camera3D" parent="Body"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 3)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 
 [node name="ShapeCast3D" type="ShapeCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, 0)

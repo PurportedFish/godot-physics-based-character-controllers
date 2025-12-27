@@ -25,17 +25,37 @@ var _platform_velocity: Vector3 = Vector3.ZERO
 var _floor_friction: float = 1.0
 var _highest_floor_normal: Vector3 = Vector3.ZERO
 var _is_on_floor: bool = false
+var _exceptions: Array[RigidBody3D]
 
 
 func _ready() -> void:
 	physics_material_override = PhysicsMaterial.new()
 	physics_material_override.friction = 0.0
+	
+	contact_monitor = true
+	max_contacts_reported = 32
 
 
 func detect_environment() -> void:
+	var state: PhysicsDirectBodyState3D = PhysicsServer3D.body_get_direct_state(get_rid())
 	_platform_velocity = Vector3.ZERO
 	_highest_floor_normal = Vector3.ZERO
 	_is_on_floor = false
+	
+	var rigid_count: int = 0
+	
+	for i in state.get_contact_count():
+		var collider: Object = state.get_contact_collider_object(i)
+		if collider is RigidBody3D:
+			print(collider)
+			_exceptions.append(collider)
+			shape_cast.add_exception(collider)
+			rigid_count += 1
+	
+	if rigid_count == 0:
+		shape_cast.clear_exceptions()
+		shape_cast.add_exception(self)
+		_exceptions.clear()
 	
 	if not shape_cast.is_colliding():
 		return
