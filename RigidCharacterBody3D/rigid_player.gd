@@ -54,7 +54,8 @@ func _physics_process(_delta: float) -> void:
 	if is_on_floor():
 		acceleration = GROUND_ACCEL
 	else:
-		acceleration = AIR_ACCEL
+		if not floor_snap_cast.is_colliding():
+			acceleration = AIR_ACCEL
 		_jump_applied = false
 	
 	if dir:
@@ -64,8 +65,9 @@ func _physics_process(_delta: float) -> void:
 		target_velocity.x = 0.0
 		target_velocity.z = 0.0
 	
-	move_and_slide()
 	_try_floor_snap()
+	move_and_slide()
+
 
 
 func _unhandled_input(event: InputEvent) -> void:

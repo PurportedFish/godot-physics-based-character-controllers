@@ -47,7 +47,6 @@ func detect_environment() -> void:
 	for i in state.get_contact_count():
 		var collider: Object = state.get_contact_collider_object(i)
 		if collider is RigidBody3D:
-			print(collider)
 			_exceptions.append(collider)
 			shape_cast.add_exception(collider)
 			rigid_count += 1

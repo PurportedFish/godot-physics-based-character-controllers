@@ -6,6 +6,7 @@
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1qk3b"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_1qk3b"]
+radius = 0.1
 
 [node name="RigidPlayer" type="RigidBody3D"]
 mass = 60.0
@@ -25,4 +26,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 [node name="FloorSnapCast" type="ShapeCast3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("SphereShape3D_1qk3b")
-target_position = Vector3(0, -0.7, 0)
+target_position = Vector3(0, -1.5, 0)

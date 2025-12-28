@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bn3w0qt8rul1d"]
+
+[ext_resource type="Script" uid="uid://gd7qgp5w3wg" path="res://HybridCharacterBody3D/hybrid_player.gd" id="1_cefkv"]
+[ext_resource type="Script" uid="uid://bcw3k6sukem3t" path="res://RigidCharacterBody3D/rigid_character_body_3d.gd" id="2_80oi5"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_rt25s"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pnw5c"]
+
+[node name="HybridPlayer" type="Node3D" node_paths=PackedStringArray("character_body", "physics_body")]
+script = ExtResource("1_cefkv")
+character_body = NodePath("CharacterBody3D")
+physics_body = NodePath("RigidCharacterBody3D")
+metadata/_custom_type_script = "uid://bll05woly56ai"
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_rt25s")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="RigidCharacterBody3D" type="RigidBody3D" parent="."]
+mass = 60.0
+script = ExtResource("2_80oi5")
+metadata/_custom_type_script = "uid://bcw3k6sukem3t"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidCharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CapsuleShape3D_pnw5c")
+debug_color = Color(0.9683084, 0, 0.47176808, 0.41960785)
