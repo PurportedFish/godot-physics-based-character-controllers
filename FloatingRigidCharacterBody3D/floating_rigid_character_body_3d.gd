@@ -113,6 +113,15 @@ func try_float() -> void:
 	var spring_force: float = -ride_spring_strength * x * mass
 	var damping_force: float = -ride_spring_damper * Vector3.UP.dot(linear_velocity)
 	
+	for i in shape_cast.get_collision_count():
+		var collider := shape_cast.get_collider(i)
+		if collider is RigidBody3D:
+			var contact := shape_cast.get_collision_point(i)
+			collider.apply_force(
+				-shape_cast.get_collision_normal(i) * (spring_force + damping_force),
+				collider.to_local(contact)
+			)
+	
 	apply_central_force((spring_force + damping_force) * up_direction)
 	
 	shape_cast.global_rotation = Vector3.ZERO
